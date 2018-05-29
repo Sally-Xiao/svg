@@ -1,0 +1,49 @@
+.text{
+    fill: none;
+    stroke-width: 5;
+    stroke-dasharray: 80 180;
+    font-size: 120pt;
+    
+    stroke: #F60A0A;
+  }
+  
+  .text1{
+      stroke: #F60A0A;
+      animation: stroke 3s linear infinite alternate;
+  }
+  .text2{
+      stroke: #333;
+      animation: stroke1 3s linear infinite alternate;
+  }
+  
+  .text3{
+      stroke: yellow;
+      animation: stroke2 3s linear infinite alternate;
+  }
+  
+  @keyframes stroke{
+      0%{
+          stroke-dashoffset: 0; 
+      }
+      100% {
+          stroke-dashoffset: 260;
+      }
+  }
+  
+  @keyframes stroke1{
+      0%{
+          stroke-dashoffset: 80;   /* 为前一个元素stroke-dasharray:x y中的x的长度 */
+      }
+      100% {
+          stroke-dashoffset: 340;
+      }
+  }
+  
+  @keyframes stroke2{
+      0%{
+          stroke-dashoffset: 160; /* 为前两个元素stroke-dasharray:x y中的x的长度之和， 以此类推 */
+      }
+      100% {
+          stroke-dashoffset: 420;
+      }
+  }
